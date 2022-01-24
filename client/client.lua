@@ -12,7 +12,7 @@ Citizen.CreateThread(function()
 				awayFromObject = false
 				DrawText3Ds(objectPos.x, objectPos.y, objectPos.z + 1.0, "~g~J~w~ - USE")
 				if IsControlJustReleased(0, 0xF3830D8E) then -- [J]
-					TriggerEvent('drp_waterpump:client:drinking')
+					TriggerEvent('rsg_waterpump:client:drinking')
 				end
 			end
 		end
@@ -34,7 +34,7 @@ Citizen.CreateThread(function()
 				awayFromObject = false
 				DrawText3Ds(objectPos.x, objectPos.y, objectPos.z + 1.0, "~g~J~w~ - USE")
 				if IsControlJustReleased(0, 0xF3830D8E) then -- [J]
-					TriggerEvent('drp_waterpump:client:drinking')
+					TriggerEvent('rsg_waterpump:client:drinking')
 				end
 			end
 		end
@@ -45,8 +45,8 @@ Citizen.CreateThread(function()
 end)
 
 -- thirst adjust
-RegisterNetEvent('drp_waterpump:client:drinking')
-AddEventHandler('drp_waterpump:client:drinking', function()
+RegisterNetEvent('rsg_waterpump:client:drinking')
+AddEventHandler('rsg_waterpump:client:drinking', function()
 	QBCore.Functions.Progressbar("drink-pump", "Drinking..", 5000, false, true, {
 		disableMovement = false,
 		disableCarMovement = false,
@@ -55,7 +55,7 @@ AddEventHandler('drp_waterpump:client:drinking', function()
 	}, {}, {}, {}, function() -- Done
 		ClearPedTasksImmediately(PlayerPedId())
 		exports['rsg_notify']:DisplayNotification('ahhh fresh', 5000)
-		TriggerServerEvent("QBCore:Server:SetMetaData", "thirst", QBCore.Functions.GetPlayerData().metadata["thirst"] + 100)
+		TriggerServerEvent("QBCore:Server:SetMetaData", "thirst", QBCore.Functions.GetPlayerData().metadata["thirst"] + 100) -- adjust as required
 	end, function()
 		exports['rsg_notify']:DisplayNotification('Cancelled', 3000)
 	end)

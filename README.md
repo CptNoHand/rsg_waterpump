@@ -11,6 +11,8 @@
 
 # Description
 - allows you to drink from a water-pump for free
+- prop : p_waterpump01x
+- prop : p_wellpumpnbx01x
 
 # Installation
 1. extract the contents of the rsg_waterpump.zip
