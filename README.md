@@ -22,5 +22,5 @@
 # Add to server.cfg to start
 ensure rsg_waterpump
 
-# Please consider donating:
+# consider donating:
 - https://www.buymeacoffee.com/rexshack
