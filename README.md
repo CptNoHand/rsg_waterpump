@@ -4,8 +4,10 @@
 - github : https://github.com/RexShack
 - website : https://www.rexshack.com
 
-# Built using RedM Game Build 1436 and Framework QBCore RedM Edition
+# Framework QBCore RedM Edition
 - https://github.com/qbcore-redm-framework
+
+# Server Game Build
 - https://docs.fivem.net/docs/server-manual/server-commands/#sv_enforcegamebuild-build
 - add to your server.cfg : sv_enforceGameBuild 1436
 
@@ -19,7 +21,6 @@
 2. add it to your resources folder
 3. Add the following to your "server.cfg"
 
-# Add to server.cfg to start
 ensure rsg_waterpump
 
 # consider donating:
