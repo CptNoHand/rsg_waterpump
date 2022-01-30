@@ -54,10 +54,10 @@ AddEventHandler('rsg_waterpump:client:drinking', function()
 		disableCombat = true,
 	}, {}, {}, {}, function() -- Done
 		ClearPedTasksImmediately(PlayerPedId())
-		exports['rsg_notify']:DisplayNotification('ahhh fresh', 5000)
+		QBCore.Functions.Notify("ahhh fresh", "success")
 		TriggerServerEvent("QBCore:Server:SetMetaData", "thirst", QBCore.Functions.GetPlayerData().metadata["thirst"] + 100) -- adjust as required
 	end, function()
-		exports['rsg_notify']:DisplayNotification('Cancelled', 3000)
+		QBCore.Functions.Notify("Cancelled", "error")
 	end)
 end)
 
